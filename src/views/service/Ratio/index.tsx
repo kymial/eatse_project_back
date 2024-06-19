@@ -1,12 +1,25 @@
 import React, { useState } from 'react'
-import './style.css'
-import SelectBox from 'src/components/Selectbox';
-import { BarElement, CategoryScale, Chart as ChartJs, Legend, LineElement, LinearScale, PointElement, Ticks, Tooltip } from 'chart.js';
-import { Bar, Line } from 'react-chartjs-2';
 import { useCookies } from 'react-cookie';
-import { getRatioDataRequest } from 'src/apis/estate';
-import { GetRatioDataResponseDto } from 'src/apis/estate/dto/response';
+import { Bar, Line } from 'react-chartjs-2';
+
+import { BarElement, 
+    CategoryScale,
+    Legend, 
+    LineElement, 
+    LinearScale, 
+    PointElement, 
+    Tooltip,
+    Chart as ChartJs
+} from 'chart.js';
+
+import SelectBox from 'src/components/Selectbox';
+
 import ResponseDto from 'src/apis/response.dto';
+import { GetRatioDataResponseDto } from 'src/apis/estate/dto/response';
+
+import { getRatioDataRequest } from 'src/apis/estate';
+
+import './style.css'
 
 ChartJs.register(
     CategoryScale,
